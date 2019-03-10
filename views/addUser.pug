@@ -1,0 +1,19 @@
+html
+    head
+        title Add User
+    body
+        form(id='addUser', method='get', action='/newUser')
+            div
+                label(for='userID') User ID
+                input(type='text', id='userID', name='userID' placeholder)
+            div
+                label(for='name') Name
+                input(type='text', id='name', name='name')
+            div
+                label(for='email') Email
+                input(type='email', id='email', name='email')
+            div
+                label(for='age') Age
+                input(type='number', id='age', name='age')
+            div
+                input(type='submit', value='Add User')

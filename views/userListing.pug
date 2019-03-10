@@ -1,0 +1,29 @@
+html
+    head
+        title User Listings
+    body
+        table
+            tr
+                th User ID
+                th Name
+                th Email
+                th Age
+                th Edit
+                th Delete
+            each user in users
+                tr
+                    td #{user.userID}
+                    td #{user.name}
+                    td #{user.email}
+                    td #{user.age}
+                    td
+                        a(href="/editUser?userID=" + user.userID) Edit
+                    td
+                        a(href='/deleteUser?name=' + user.name) Delete
+                //if !user._json
+                //else
+                    td #(user.id)
+                    td #(user.name.givenName + ' ' + user.name.familyName)
+                    td #(user.email)
+                    td #(user.age)
+            a(href='/addUser') Add another user
